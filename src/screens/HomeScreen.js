@@ -13,15 +13,6 @@ const HomeScreen = () => {
 		})
 	}, [navigation])
 
-	const fadeIn = {
-		from: {
-			opacity: 0,
-		},
-		to: {
-			opacity: 1,
-		},
-	}
-
 	return (
 		<SafeAreaView className='flex-1 bg-red-white relative'>
 			<View className='flex-row px-6 mt-8 items-center space-x-2'>
@@ -64,7 +55,10 @@ const HomeScreen = () => {
 					className='w-full h-full object-cover mt-8'
 				/>
 
-				<TouchableOpacity className='absolute bottom-28 w-24 h-24 border-l-2 border-r-2 border-t-4 border-[#05b8c6] items-center justify-center rounded-full'>
+				<TouchableOpacity
+					onPress={() => navigation.navigate('Discover')}
+					className='absolute bottom-28 w-24 h-24 border-l-2 border-r-2 border-t-4 border-[#05b8c6] items-center justify-center rounded-full'
+				>
 					<Animatable.View
 						animation='pulse'
 						easing={'ease-in-out'}
